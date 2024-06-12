@@ -1,0 +1,102 @@
+/* animation in css */
+@keyframes glow {
+  from {
+    box-shadow: 0px 2px 14px 0px #efd569;
+  }
+  to {
+    box-shadow: 0px 6px 20px 0px #efd569;
+  }
+}
+@keyframes boxglow {
+  from {
+    box-shadow: 0px 0px 20px 0px #ec4141;
+  }
+  to {
+    box-shadow: 0px 0px 20px 5px #ec4141;
+  }
+}
+/* normal css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Onest";
+  background-color: #000;
+}
+* {
+  box-sizing: border-box;
+}
+.container {
+  width: 1200px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* main css start */
+.heading {
+  background-color: rgb(30, 30, 30);
+  padding: 40px 0;
+  border-bottom: 2px solid #ffce01;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+.heading h1 {
+  color: #fff;
+  text-align: center;
+  margin: 0;
+}
+.main-tic-tac {
+  padding: 50px 0;
+}
+.win-ply {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 25px;
+  color: #fff;
+}
+.main-game {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.main-game .boxs {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(30, 30, 30);
+  margin: 20px;
+  border-radius: 10px;
+  border: 2px solid #fb1010;
+  animation: boxglow 1s ease-in-out infinite alternate;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: #fb1010;
+}
+
+.btn-wapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+button.reset,
+.new-game {
+  border: 2px solid #fb1010;
+  background: #fb1010;
+  color: #fff;
+  padding: 20px 40px;
+  font-size: 20px;
+  border-radius: 10px;
+  transition: all ease 0.5s;
+}
+button.reset:hover,
+.new-game:hover {
+  box-shadow: 0px 0px 20px 6px #ec4141;
+}
+.winner-content {
+  text-align: center;
+  margin-bottom: 30px;
+  display: none;
+}
